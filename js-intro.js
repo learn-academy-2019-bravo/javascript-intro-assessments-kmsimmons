@@ -3,20 +3,20 @@
 // Consider this variable:
 
 var mantra = "Be the dev";
-uuuuuuu
+
 // 1. Write the code that returns 'B' from mantra.
-
+console.log(mantra[0]);
 // 2. Write the code that determines if there is a 'x' in mantra.
-
+console.log(mantra.includes('x'));
 // 3. Write the code that determines if there is a 'v' in mantra.
-
+console.log(mantra.includes('v'));
 // Stretch: Write the code that returns the position of 'v' in mantra.
-
+console.log(mantra.search('v'));
 
 // Consider the following statement:
 
-var codingIsEasy
-var imBored
+var codingIsEasy = true
+var imBored = true
 
 if (codingIsEasy && imBored) {
     console.log("I need more!")
@@ -28,8 +28,8 @@ if (codingIsEasy && imBored) {
 
 // Consider the following statement:
 
-var imLost
-var imFrustrated
+var imLost = false
+var imFrustrated = false
 
 if (imLost || imFrustrated) {
     console.log('Break time!')
@@ -41,16 +41,38 @@ if (imLost || imFrustrated) {
 
 // 6a. Recall the mantra variable from the first question. Write the code that logs each letter of mantra using a for loop.
 
-// Stretch: Using a while loop.
+for(let i = 0; i < mantra.length; i++){
+  console.log(mantra[i]);
+}
 
+// Stretch: Using a while loop.
+var mantra = "Be the dev";
+
+let i = 0
+while (i < mantra.length) {
+  console.log(mantra[i]);
+  i++
+}
 // Super Stretch: Using forEach().
+//forEach() can only be used on an array?
 
 // Consider the following variable:
 
 var message = "thisisateststring"
 
 // 7. Write a function that takes a string like message as an argument and returns the string without vowels.
-
+function removeVowel(str) {
+  let newString = str.split('')
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  let arr1 = []
+  for(let i = 0; i < newString.length; i++){
+    if(!vowels.includes(newString[i])){
+      arr1.push(newString[i])
+    }
+  }
+   return finalArr = arr1.join('')
+}
+console.log(removeVowel(message));
 // Stretch: Update your function to throw an exception if the argument is not a string.
 
 // Super Duper Stretch: Update your function to throw a TypeError if the argument is not a string.
