@@ -82,3 +82,18 @@ console.log(removeVowel(message));
 var toonimals = [ {name: 'Itchy', animal: 'mouse'}, {name: 'Stimpy', animal: 'cat'}, {name: 'Daffy', animal: 'duck'}, {name: 'Scratchy', animal: 'cat'}, {name: 'Ren', animal: 'dog'}, {name: 'Felix', animal: 'cat'}]
 
 // 8. Write a function that takes an array like toonimals and returns an array with only the toons that are cats.
+
+// const cats = toonimals.filter(function(obj) {
+//   return obj.animal === 'cat'
+// })
+// console.log(cats);
+
+catsOnly = (arr) => {
+      let cats = arr.filter(function(value){
+        if(value.animal === 'cat'){
+          return value.name
+        }
+      })
+    return cats
+}
+console.log(catsOnly(toonimals));
